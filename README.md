@@ -6,7 +6,7 @@ Thanks for taking time to work on this assignment! We have a small list with som
 - Recreate the design as pixel perfect as possible (we deliver a sketch file, make sure all fonts are installed on your system)
 - Animations should be super slick. These can be done with CSS as well as with JS.
 - Responsive
-- - we will check on a recent Android and iPhone, and the most recent Chrome, Firefox, IE11.
+  - we will check on a recent Android and iPhone, and the most recent Chrome, Firefox, IE11.
 - Progressive enhancement, it is still functional (with or without animations) in older browsers (like IE9).
 - Accessible would be nice.
 - Deliver the source, and a working index.html
@@ -19,4 +19,5 @@ Thanks for taking time to work on this assignment! We have a small list with som
 - Feel free to blow us away with some extra’s you like. Amaze us with your approach. Most importantly: you should be confident of your choices.
 
 Good luck!
-- The Blendle Team
+
+The Blendle Team
