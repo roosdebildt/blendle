@@ -1,0 +1,24 @@
+{
+  "name": "blendle",
+  "homepage": "https://github.com/roosdebildt/blendle",
+  "authors": [
+    "Roos de Bildt <roosdebildt@gmail.com>"
+  ],
+  "description": "blendle frontend assignment",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "node.js",
+    "gulp",
+    "sass",
+    "html"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ]
+}
