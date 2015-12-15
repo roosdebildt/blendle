@@ -1,24 +1,23 @@
 {
-  "name": "blendle",
-  "homepage": "https://github.com/roosdebildt/blendle",
-  "authors": [
-    "Roos de Bildt <roosdebildt@gmail.com>"
-  ],
-  "description": "blendle frontend assignment",
-  "main": "index.html",
-  "moduleType": [],
-  "keywords": [
-    "node.js",
-    "gulp",
-    "sass",
-    "html"
-  ],
-  "license": "MIT",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "test",
-    "tests"
-  ]
+  "version": "1.0.0",
+  "dependencies": {
+    "gulp-connect": "^2.2.0",
+    "gulp-sass": "^2.1.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.0",
+    "node-normalize-scss": "^1.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roosdebildt/blendle.git"
+  },
+  "author": "Roos de Bildt",
+  "bugs": {
+    "url": "https://github.com/roosdebildt/blendle/issues"
+  }
 }
