@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 
@@ -36,6 +37,15 @@ gulp.task('serve', function() {
 
   gulp.watch("./app/stylesheets/sass/*.scss");
   gulp.watch("./app/stylesheets/sass/*.scss").on('change', reload);
+});
+
+gulp.task('default', function () {
+	return gulp.src('app/application.css')
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
+		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('default', ['sass', 'sass:watch', 'watch', 'serve']);
