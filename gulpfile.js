@@ -38,4 +38,4 @@ gulp.task('serve', function() {
   gulp.watch("./app/stylesheets/sass/*.scss").on('change', reload);
 });
 
-gulp.task('default', ['sass', 'watch', 'serve']);
+gulp.task('default', ['sass', 'sass:watch', 'watch', 'serve']);
