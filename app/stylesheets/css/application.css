@@ -99,7 +99,8 @@ strong {
 
 .article-end {
   font-family: "Proxima Nova";
-  color: #948784; }
+  color: #948784;
+  padding: 2rem 1rem 0 1rem; }
 
 html {
   height: 100%; }
