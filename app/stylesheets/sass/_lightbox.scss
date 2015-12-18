@@ -1,0 +1,40 @@
+//  image lightbox styles
+
+.image-large {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  // TODO: have a look at transforms
+  transform: translate(-50%);
+  width: 100%;
+  background: rgba(0,0,0,.7);
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+  overflow: hidden;
+}
+
+// TODO: have a look at centering positioning
+.image-large img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left:0;
+  right:0;
+  bottom: 0;
+  max-height: 0;
+  max-width: 0;
+  box-sizing: border-box;
+  transition: .5s ease-in-out;
+}
+
+// uses :target pseudo-class for  the animations upon clicking
+.image-large:target {
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+}
+
+.image-large:target img {
+  max-height: 100%;
+  max-width: 100%;
+}
