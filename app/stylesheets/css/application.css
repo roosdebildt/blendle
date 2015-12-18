@@ -1,0 +1,159 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-size: 14px;
+  line-height: 30px; }
+
+strong {
+  font-weight: bold; }
+
+.article-info {
+  font-family: "Proxima Nova";
+  color: #948784;
+  padding-left: 1rem; }
+
+.article-title {
+  font-family: "SourceSansPro-Black", sans-serif;
+  font-size: 56px;
+  line-height: 60px;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 0 1rem; }
+
+.article-subtitle {
+  font-family: "SourceSansPro-Bold";
+  font-size: 28px;
+  color: #CE242D;
+  text-transform: uppercase;
+  padding: 0 1rem; }
+
+.article-intro {
+  font-family: "AlegreyaSans-Medium";
+  font-size: 26px;
+  color: #000000;
+  padding: 2rem 1rem 0 1rem; }
+
+.article-author {
+  font-family: "AlegreyaSans-ExtraBold";
+  font-size: 18px;
+  color: #333332;
+  padding: 2rem 1rem; }
+
+.article-header {
+  font-family: "AlegreyaSans-Bold";
+  font-size: 22px;
+  color: #CE242D;
+  text-transform: uppercase;
+  padding: 2rem 1rem 0 1rem; }
+
+.article-paragraph {
+  font-family: "AGaramondPro-Regular";
+  font-size: 21px;
+  color: #333332;
+  padding: 0 1rem; }
+
+.article-end {
+  font-family: "Proxima Nova";
+  color: #948784; }
+
+html {
+  height: 100%; }
+
+.flex {
+  display: flex; }
+  .flex.center {
+    justify-content: center; }
+  .flex.left {
+    justify-content: left; }
+
+.navigation {
+  line-height: 44px;
+  height: 44px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  border-bottom: 1px solid #EAEAEA; }
+
+.article-info {
+  flex-grow: 1; }
+
+.provider-info {
+  width: 100%;
+  position: fixed;
+  top: 2px;
+  display: flex; }
+
+.btn {
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid #EAEAEA; }
+
+.content {
+  padding-top: 44px;
+  padding-bottom: 176px; }
+
+.article-main-image {
+  background-image: url("http://localhost:3000/images/main-image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-top: 77.44%; }
+
+.article-content {
+  width: 100%;
+  max-width: 626px; }
+
+.article-title {
+  max-width: 521.66667px; }
+
+.article-subtitle {
+  max-width: 313px; }

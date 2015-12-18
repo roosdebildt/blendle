@@ -1,0 +1,71 @@
+// basic typography
+
+$standard-padding:    0 1rem;
+$top-padding:         2rem 1rem 0 1rem;
+$top-bottom-padding:  2rem 1rem;
+
+body {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.article-info {
+  font-family: "Proxima Nova";
+  color: $warm-grey;
+  padding-left: 1rem;
+}
+
+.article-title {
+  font-family: "SourceSansPro-Black", sans-serif;
+  font-size: 56px;
+  line-height: 60px;
+  color: $black;
+  text-transform: uppercase;
+  padding: $standard-padding;
+}
+
+.article-subtitle {
+  font-family: "SourceSansPro-Bold";
+  font-size: 28px;
+  color: $revue-red;
+  text-transform: uppercase;
+  padding: $standard-padding;
+}
+
+.article-intro {
+  font-family: "AlegreyaSans-Medium";
+  font-size: 26px;
+  color: $black;
+  padding: $top-padding;
+}
+
+.article-author {
+  font-family: "AlegreyaSans-ExtraBold";
+  font-size: 18px;
+  color: $dark-grey;
+  padding: $top-bottom-padding;
+}
+
+.article-header {
+  font-family: "AlegreyaSans-Bold";
+  font-size: 22px;
+  color: $revue-red;
+  text-transform: uppercase;
+  padding: $top-padding;
+}
+
+.article-paragraph {
+  font-family: "AGaramondPro-Regular";
+  font-size: 21px;
+  color: $dark-grey;
+  padding: $standard-padding;
+}
+
+.article-end {
+  font-family: "Proxima Nova";
+  color: $warm-grey;
+}
