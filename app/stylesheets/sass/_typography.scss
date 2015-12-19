@@ -1,14 +1,29 @@
 // basic typography
+$base-font-size:        14px;
+$subtitle-font-size:    ($base-font-size*2);
+$title-font-size:       ($base-font-size*4);
 
-$standard-padding:    0 1rem;
-$top-padding:         2rem 1rem 0 1rem;
-$top-bottom-padding:  2rem 1rem;
+// in order of appearance
+$intro-font-size:       26px;
+$author-font-size:      18px;
+$paragraph-font-size:   21px;
+$header-font-size:      22px;
+$caption-font-size:     10px;
+
+// line-heights
+$base-line-height:      30px;
+$title-line-height:     ($base-line-height*2);
+
+// padding
+$standard-padding:      0 15px;
+$top-padding:           30px 15px 0 15px;
+$top-bottom-padding:    30px 15px;
 
 body {
   font-family: "Proxima Nova";
-  font-size: 14px;
-  line-height: 30px;
-  color: $warm-grey;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $cool-grey;
 }
 
 strong {
@@ -16,50 +31,68 @@ strong {
 }
 
 figcaption {
-  font-size: 10px;
+  font-size: $caption-font-size;
   line-height: 12.14px;
 }
 
+.shared-quote {
+  color: $black;
+}
+
+// article styles
 .article-info {
-  font-family: "Proxima Nova";
-  color: $warm-grey;
-  padding-left: 1rem;
+  padding-left: 15px;
 }
 
 .article-title {
   font-family: "SourceSansPro-Black", sans-serif;
-  font-size: 56px;
-  line-height: 60px;
+  font-size: $title-font-size;
+  line-height: $title-line-height;
   color: $black;
   text-transform: uppercase;
   padding: $standard-padding;
+
+  &.preview {
+    font-size: $title-font-size*0.8;
+    line-height: $title-line-height*0.8;
+  }
 }
 
 .article-subtitle {
   font-family: "SourceSansPro-Bold";
-  font-size: 28px;
+  font-size: $subtitle-font-size;
   color: $revue-red;
   text-transform: uppercase;
   padding: $standard-padding;
+
+  &.preview {
+    font-size: $subtitle-font-size*0.8;
+    line-height: $base-line-height*0.8;
+  }
 }
 
 .article-intro {
   font-family: "AlegreyaSans-Medium";
-  font-size: 26px;
+  font-size: $intro-font-size;
   color: $black;
   padding: $top-padding;
+
+  &.preview {
+    font-size: $intro-font-size*0.8;
+    line-height: $base-line-height*0.8;
+  }
 }
 
 .article-author {
   font-family: "AlegreyaSans-ExtraBold";
-  font-size: 18px;
+  font-size: $author-font-size;
   color: $dark-grey;
   padding: $top-bottom-padding;
 }
 
 .article-header {
   font-family: "AlegreyaSans-Bold";
-  font-size: 22px;
+  font-size: $header-font-size;
   color: $revue-red;
   text-transform: uppercase;
   padding: $top-padding;
@@ -67,7 +100,7 @@ figcaption {
 
 .article-paragraph {
   font-family: "AGaramondPro-Regular";
-  font-size: 21px;
+  font-size: $paragraph-font-size;
   color: $dark-grey;
   padding: $standard-padding;
 }

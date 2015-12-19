@@ -1,7 +1,8 @@
 $nav-bar-height:        44px;
 $article-width:         635px;
+$card-width:            335px;
 
-html {
+html, body {
   height: 100%;
 }
 
@@ -16,6 +17,7 @@ img {
 
 .flex {
   display: flex;
+  position: relative;
 
   &.center {
     justify-content: center;
@@ -31,13 +33,74 @@ img {
 }
 
 .container {
-
+  height: 100%;
 }
 
+// card styles
 .cards {
   background-color: $lightest-grey;
 }
 
+.card {
+  width: $card-width;
+  position: relative;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.shared-container {
+  padding: 10px;
+}
+
+.shared-content {
+  background-color: $white;
+  box-shadow: $shadow-small;
+  border-radius: 4px;
+}
+
+.shared-by {
+  height: 40px;
+  border-bottom: 1px solid $light-grey;
+  padding: 10px;
+}
+
+.shared-info {
+  padding: 15px 10px;
+}
+
+.preview-container {
+  padding: 5px;
+  position: relative;
+  top: -20px;
+  height: 100%;
+  // overflow: hidden;
+}
+
+.preview-content {
+  background-color: $white;
+  border: 1px solid $light-grey;
+  box-shadow: $shadow-big;
+  // overflow: hidden;
+}
+
+.preview-info {
+  height: 40px;
+  padding: 10px;
+  background-color: $white;
+}
+
+.article-preview-image {
+    background-image: url('http://localhost:3000/images/image_preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    // TODO: check padding-top
+    padding-top: 65%;
+}
+
+// article styles
 // top navigation bar
 .navigation {
   line-height: $nav-bar-height;
@@ -46,7 +109,7 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  background: $white;
+  background-color: $white;
   border-bottom: 1px solid #EAEAEA;
 }
 
@@ -80,6 +143,10 @@ img {
 
 // articles
 
+.article {
+  background-color: $white;
+}
+
 .article-main-image {
     background-image: url('http://localhost:3000/images/image_main.png');
     background-size: contain;
@@ -105,7 +172,7 @@ img {
 
 // TODO: have a look at max-width of images after nav collapse
 .article-image {
-  padding: 1rem 0;
+  padding: 15px 0;
   text-align: right;
 }
 
