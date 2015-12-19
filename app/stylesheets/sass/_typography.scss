@@ -5,12 +5,19 @@ $top-padding:         2rem 1rem 0 1rem;
 $top-bottom-padding:  2rem 1rem;
 
 body {
+  font-family: "Proxima Nova";
   font-size: 14px;
   line-height: 30px;
+  color: $warm-grey;
 }
 
 strong {
   font-weight: bold;
+}
+
+figcaption {
+  font-size: 10px;
+  line-height: 12.14px;
 }
 
 .article-info {
@@ -66,7 +73,5 @@ strong {
 }
 
 .article-end {
-  font-family: "Proxima Nova";
-  color: $warm-grey;
   padding: $top-padding;
 }

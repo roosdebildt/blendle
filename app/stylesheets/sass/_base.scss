@@ -1,8 +1,17 @@
 $nav-bar-height:        44px;
-$article-width:         626px;
+$article-width:         635px;
 
 html {
   height: 100%;
+}
+
+img {
+  max-width: 100%;
+  svg {
+    path {
+      fill: red;
+    }
+  }
 }
 
 .flex {
@@ -15,10 +24,18 @@ html {
   &.left {
     justify-content: left;
   }
+
+  &.right {
+    justify-content: right;
+  }
 }
 
 .container {
 
+}
+
+.cards {
+  background-color: $lightest-grey;
 }
 
 // top navigation bar
@@ -64,12 +81,13 @@ html {
 // articles
 
 .article-main-image {
-    background-image: url('http://localhost:3000/images/main-image.png');
+    background-image: url('http://localhost:3000/images/image_main.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     height: 0;
-    padding-top: 77.44%;
+    // TODO: check padding-top
+    padding-top: 50%;
 }
 
 .article-content {
@@ -85,6 +103,12 @@ html {
   max-width: ($article-width/2);
 }
 
+// TODO: have a look at max-width of images after nav collapse
 .article-image {
   padding: 1rem 0;
+  text-align: right;
+}
+
+.stacked {
+  padding-top: 0;
 }
