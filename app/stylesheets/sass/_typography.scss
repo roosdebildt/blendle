@@ -30,13 +30,39 @@ strong {
   font-weight: bold;
 }
 
+a {
+  text-decoration: none;
+}
+
 figcaption {
   font-size: $caption-font-size;
   line-height: 12.14px;
 }
 
+// card styles
+.genre {
+  font-size: $base-font-size*0.8;
+  line-height: 17px;
+  color: $dark-blue;
+  border: 1px solid $dark-blue;
+  border-radius: 4px;
+  padding: 0 5px;
+  height: 17px;
+  margin-right: 5px;
+}
+
+.likes {
+  color: $black;
+  font-size: 12px;
+}
+
+.price {
+  font-size: 12px;
+}
+
 .shared-quote {
   color: $black;
+  line-height: ($base-line-height/2);
 }
 
 // article styles
@@ -54,7 +80,7 @@ figcaption {
 
   &.preview {
     font-size: $title-font-size*0.8;
-    line-height: $title-line-height*0.8;
+    line-height: $title-line-height*0.6;
   }
 }
 
@@ -67,7 +93,7 @@ figcaption {
 
   &.preview {
     font-size: $subtitle-font-size*0.8;
-    line-height: $base-line-height*0.8;
+    line-height: $base-line-height*0.7;
   }
 }
 

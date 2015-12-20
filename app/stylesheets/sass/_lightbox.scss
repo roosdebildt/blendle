@@ -11,6 +11,8 @@
   opacity: 0;
   transition: opacity .5s ease-in-out;
   overflow: hidden;
+  // TODO: check z-index
+  z-index: 20;
 }
 
 // TODO: have a look at centering positioning

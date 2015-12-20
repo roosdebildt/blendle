@@ -1,7 +1,27 @@
+//
+// VARIABLES AND MIXINS
+//
+$mobile-breakpoint:    500px;
+
+// paddings and margins
+$standard:              30px;
+$half:                  15px;
+$small:                 10px;
+$extra-small:           5px;
+
+// border
+$border:                1px solid $light-grey;
+
+// card
+$card-nav-height:       40px;
+$card-width:            335px;
+$border-radius:         4px;
+
+// article
 $nav-bar-height:        44px;
 $article-width:         635px;
-$card-width:            335px;
 
+// clearfix
 @mixin clearfix {
   &:after {
     content: "";
@@ -10,19 +30,32 @@ $card-width:            335px;
   }
 }
 
+// flex functionality
+@mixin flex {
+  display: flex;
+  position: relative;
+}
+
+//
+// BASE STYLES
+//
 html, body {
   height: 100%;
 }
 
-img {
-  max-width: 100%;
-  svg {
-    path {
-      fill: red;
-    }
-  }
+// allows for fluid children
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  overflow-y: hidden;
+  @include clearfix;
 }
 
+// flex functionality
 .flex {
   display: flex;
   position: relative;
@@ -38,79 +71,108 @@ img {
   &.right {
     justify-content: right;
   }
+
+  &.one {
+    flex-grow: 1;
+  }
 }
 
-.container {
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow-y: hidden;
-  @include clearfix;
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-// card styles
+//
+// CARD STYLES
+//
 .cards {
   background-color: $lightest-grey;
 }
 
+// fluid, vertically centered card
 .card {
-  height: calc(100% - 86px);
-  max-height: 760px;
-  margin: 43px auto;
   position: relative;
-  overflow-y: hidden;
   max-width: 100%;
-  clear: both;
+  height: calc(100% - 30px);
+  max-height: 760px;
+  margin: $half auto;
+  overflow-y: hidden;
   @include clearfix;
 
-  @media (min-width: 500px) {
+  @media (min-width: $mobile-breakpoint) {
     max-width: $card-width;
   }
 }
 
-.gradient {
-  background-image: -webkit-linear-gradient(rgba(255,255,255,0.38) 0%, #FFFFFF 100%);
-  background-image: -o-linear-gradient(rgba(255,255,255,0.38) 0%, #FFFFFF 100%);
-  background-image: linear-gradient(rgba(255,255,255,0.38) 0%, #FFFFFF 100%);
-}
-
+// shared
 .shared-container {
-  margin: 15px;
+  margin: $extra-small $half;
 }
 
 .shared-content {
   background-color: $white;
   box-shadow: $shadow-small;
-  border-radius: 4px;
+  border-radius: $border-radius;
 }
 
 .shared-by {
-  height: 40px;
-  border-bottom: 1px solid $light-grey;
-  padding: 10px;
+  height: $card-nav-height;
+  border-bottom: $border;
+  padding: 0 $small;
+  @include flex;
+  align-items: center;
+}
+
+.line {
+  position: absolute;
+  left: $half;
+  top: ($card-nav-height - 1px);
+  width: 26px;
+  height: 2px;
+  z-index: 1;
+  background: $dark-blue;
+}
+
+.profiles {
+  @include flex;
+  flex-grow: 1;
+
+  .profile {
+    width: $standard;
+    height: $standard;
+  }
+}
+
+.likes {
+  @include flex;
+  align-items: center;
+
+  .heart {
+    width: $half;
+    height: $half;
+    padding-right: $extra-small;
+  }
 }
 
 .shared-info {
-  padding: 15px 10px;
+  padding: $half $small;
 }
 
+// article-preview
 .preview-container {
-  margin: 10px;
+  margin: $extra-small $small;
   overflow: hidden;
   @include clearfix;
-  clear: both;
 }
 
 .preview-container {
-  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  top: 132px;
+  top: 110px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  // TODO: check-transition
   transition: top .3s cubic-bezier(.71, .01, .04, 1.6);
 }
 
@@ -120,14 +182,51 @@ img {
   box-shadow: $shadow-big;
   height: 100%;
   overflow: hidden;
-  clear: both;
   @include clearfix;
 }
 
 .preview-info {
-  height: 40px;
-  padding: 10px;
+  height: $card-nav-height;
   background-color: $white;
+  @include flex;
+
+  .btn {
+    width: $card-nav-height;
+  }
+}
+
+.provider {
+  @include flex;
+  align-items: center;
+  flex-grow: 1;
+
+  .revu-logo {
+    height: $half;
+    width: auto;
+    margin-left: $small;
+  }
+}
+
+.price {
+  line-height: $nav-bar-height;
+  padding-right: $small;
+}
+
+.article-preview {
+  height: calc(100% - 40px);
+  display: block;
+}
+
+.article-preview::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: -($standard*2);
+  height: ($standard*2);
+  pointer-events: none;
+  background: linear-gradient(to top, $white 5%, rgba(255, 255, 255, 0) 100%);
 }
 
 .article-preview-image {
@@ -149,8 +248,10 @@ img {
   top: 0;
   left: 0;
   right: 0;
+  // TODO: hier naar kijken
+  z-index: 10;
   background-color: $white;
-  border-bottom: 1px solid #EAEAEA;
+  border-bottom: $border;
 }
 
 .article-info {
@@ -159,16 +260,17 @@ img {
 
 .provider-info {
   width: 100%;
+  @include flex;
   position: fixed;
+  z-index: 2;
   top: 2px;
-  display: flex;
 }
 
 .btn {
   width: $nav-bar-height;
-  display: flex;
+  @include flex;
   justify-content: center;
-  border-left: 1px solid #EAEAEA;
+  border-left: $border;
 }
 
 .btn:hover {
@@ -213,59 +315,10 @@ img {
 
 // TODO: have a look at max-width of images after nav collapse
 .article-image {
-  padding: 15px 0;
+  padding: $half 0;
   text-align: right;
 }
 
 .stacked {
   padding-top: 0;
-}
-
-// experiment
-// experiment
-
-.app {
-  display: block;
-  height: 100%;
-  background-color: blue;
-}
-
-.main {
-  overflow-y: hidden;
-  height: 100%;
-  position: relative;
-  z-index: 1;
-  background-color: red;
-}
-
-.v-module {
-  display: block;
-  width: auto;
-  background-color: yellow;
-  height: 100%;
-}
-
-.pane-scroll {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow-y: hidden;
-  background-color: green;
-}
-
-.pane-content {
-  height: calc(100% - 86px);
-  max-height: 760px;
-  margin: 43px 10px;
-  width: 300px;
-  position: relative;
-  background-color: black;
-  overflow: hidden;
-}
-
-.blue {
-  background-color: blue;
-  border: 1px solid white;
 }
