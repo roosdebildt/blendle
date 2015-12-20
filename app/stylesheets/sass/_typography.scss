@@ -21,9 +21,6 @@ $caption-font-size:            10px;
 $base-line-height:             30px;
 $title-line-height:            ($base-line-height*2);
 
-// mobile
-$mobile:                       0.6;
-
 // preview
 $preview:                      0.8;
 
@@ -31,10 +28,6 @@ $preview:                      0.8;
 $side-padding:                 0 $half;
 $top-padding:                  $standard $half 0 $half;
 $top-bottom-padding:           $standard $half;
-
-$mobile-side-padding:          0 ($half/2);
-$mobile-top-padding:           $half ($half/2) 0 ($half/2);
-$mobile-top-bottom-padding:    $half ($half/2);
 
 //
 // BASE
@@ -44,11 +37,6 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
   color: $cool-grey;
-
-  @media (max-width: $mobile-breakpoint) {
-    font-size: $base-font-size*$mobile;
-    line-height: $base-line-height*$mobile;
-  }
 }
 
 strong {
@@ -66,27 +54,15 @@ a {
   color: $dark-blue;
   font-size: $genre-font-size;
   line-height: 17px;
-
-  @media (max-width: $mobile-breakpoint) {
-    font-size: $card-font-size*$mobile;
-  }
 }
 
 .likes {
   color: $black;
   font-size: $card-font-size;
-
-  @media (max-width: $mobile-breakpoint) {
-    font-size: $card-font-size*$mobile;
-  }
 }
 
 .price {
   font-size: $card-font-size;
-
-  @media (max-width: $mobile-breakpoint) {
-    font-size: $card-font-size*$mobile;
-  }
 }
 
 .shared-quote {
@@ -98,7 +74,7 @@ a {
 // ARTICLES
 //
 .article-info {
-  padding-left: 15px;
+  padding-left: $half;
 }
 
 .article-title {
@@ -114,12 +90,6 @@ a {
     font-size: $title-font-size*$preview;
     line-height: $title-line-height*0.7;
   }
-
-  @media (max-width: $mobile-breakpoint) {
-    font-size: $title-font-size*$mobile;
-    line-height: $title-line-height*$mobile;
-    padding: $mobile-top-padding;
-  }
 }
 
 .article-subtitle {
@@ -134,12 +104,6 @@ a {
     font-size: $subtitle-font-size*$preview;
     line-height: $base-line-height*$preview;
   }
-
-  @media (max-width: $mobile-breakpoint) {
-    font-size: $subtitle-font-size*$mobile;
-    line-height: $base-line-height*$mobile;
-    padding: $mobile-top-padding;
-  }
 }
 
 .article-intro {
@@ -152,12 +116,6 @@ a {
     font-size: $intro-font-size*$preview;
     line-height: $base-line-height*$preview;
   }
-
-  @media (max-width: $mobile-breakpoint) {
-    font-size: $intro-font-size*$mobile;
-    line-height: $base-line-height*$mobile;
-    padding: $mobile-top-padding;
-  }
 }
 
 .article-author {
@@ -166,11 +124,6 @@ a {
   font-size: $author-font-size;
   color: $dark-grey;
   padding: $top-bottom-padding;
-
-  @media (max-width: $mobile-breakpoint) {
-    font-size: $author-font-size*$mobile;
-    padding: $mobile-top-bottom-padding;
-  }
 }
 
 .article-header {
@@ -180,12 +133,6 @@ a {
   color: $revue-red;
   text-transform: uppercase;
   padding: $top-padding;
-
-  @media (max-width: $mobile-breakpoint) {
-    font-size: $header-font-size*$mobile;
-    line-height: $base-line-height*$mobile;
-    padding: $mobile-top-padding;
-  }
 }
 
 .article-paragraph {
@@ -193,27 +140,13 @@ a {
   font-size: $paragraph-font-size;
   color: $dark-grey;
   padding: $side-padding;
-
-  @media (max-width: $mobile-breakpoint) {
-    font-size: $paragraph-font-size*$mobile;
-    line-height: $base-line-height*$mobile;
-    padding: $mobile-side-padding;
-  }
 }
 
 figcaption {
   font-size: $caption-font-size;
   line-height: $caption-font-size*1.2;
-
-  @media (max-width: $mobile-breakpoint) {
-    font-size: $caption-font-size*$mobile;
-  }
 }
 
 .article-end {
   padding: $top-padding;
-
-  @media (max-width: $mobile-breakpoint) {
-    padding: $mobile-top-padding;
-  }
 }

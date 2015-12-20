@@ -30,7 +30,7 @@
   @include ease-in-out;
 }
 
-// uses :target pseudo-class for the animations upon clicking
+// uses pseudo-class for the animations upon clicking
 .image-large:target {
   opacity: 1;
   top: 0;

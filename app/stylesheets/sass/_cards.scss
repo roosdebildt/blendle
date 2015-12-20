@@ -5,7 +5,6 @@
 // variables
 $card-nav-height:              40px;
 $card-width:                   335px;
-$border-radius:                4px;
 
 // base styles
 .cards {
@@ -15,29 +14,18 @@ $border-radius:                4px;
 // fluid, vertically centered card
 .card {
   position: relative;
-  max-width: 100%;
+  width: 100%;
   max-width: $card-width;
   height: calc(100% - 30px);
   max-height: 760px;
   margin: $half auto;
   overflow-y: hidden;
   @include clearfix;
-
-  // decreases margin for mobile
-  @media (max-width: $mobile-breakpoint) {
-    height: calc(100% - 15px);
-    margin: $small auto;
-  }
 }
 
 // shared
 .shared-container {
   margin: $extra-small $half;
-
-  // decreases margin for mobile
-  @media (max-width: $mobile-breakpoint) {
-    margin: ($extra-small/2) $small;
-  }
 }
 
 .shared-content {
@@ -53,19 +41,14 @@ $border-radius:                4px;
   padding: 0 $small;
   @include flex;
   align-items: center;
-
-  // decreases padding for mobile
-  @media (max-width: $mobile-breakpoint) {
-    padding: 0 $extra-small;
-  }
 }
 
 .genre {
   border: 1px solid $dark-blue;
   border-radius: $border-radius;
-  padding: 0 5px;
+  padding: 0 $extra-small;
   height: 17px;
-  margin-right: 5px;
+  margin-right: $extra-small;
   @include ease;
 
   &:hover {
@@ -79,14 +62,10 @@ $border-radius:                4px;
   position: absolute;
   left: $half;
   top: ($card-nav-height - 1px);
-  width: 26px;
+  width: 25px;
   height: 2px;
   z-index: 1;
   background: $dark-blue;
-
-  @media (max-width: $mobile-breakpoint) {
-    left: $extra-small;
-  }
 }
 
 .profiles {
@@ -119,11 +98,6 @@ $border-radius:                4px;
   margin: $extra-small $small;
   overflow: hidden;
   @include clearfix;
-
-  // decreases margin for mobile
-  @media (max-width: $mobile-breakpoint) {
-    margin: ($extra-small/2) $extra-small;
-  }
 }
 
 .preview-container {
@@ -132,9 +106,6 @@ $border-radius:                4px;
   right: 0;
   bottom: 0;
   top: 110px;
-}
-
-.preview-content {
   background-color: $white;
   border: $border;
   box-shadow: $shadow-big;
@@ -159,11 +130,6 @@ $border-radius:                4px;
     height: $half;
     width: auto;
     margin-left: $small;
-
-    // decreases margin for mobile
-    @media (max-width: $mobile-breakpoint) {
-      margin-left: $extra-small;
-    }
   }
 }
 

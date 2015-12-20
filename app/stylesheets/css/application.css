@@ -84,10 +84,6 @@ body {
   font-size: 14px;
   line-height: 30px;
   color: #8B8B8B; }
-  @media (max-width: 450px) {
-    body {
-      font-size: 8.4px;
-      line-height: 18px; } }
 
 strong {
   font-weight: bold; }
@@ -99,22 +95,13 @@ a {
   color: #343C59;
   font-size: 11px;
   line-height: 17px; }
-  @media (max-width: 450px) {
-    .genre {
-      font-size: 7.2px; } }
 
 .likes {
   color: #000000;
   font-size: 12px; }
-  @media (max-width: 450px) {
-    .likes {
-      font-size: 7.2px; } }
 
 .price {
   font-size: 12px; }
-  @media (max-width: 450px) {
-    .price {
-      font-size: 7.2px; } }
 
 .shared-quote {
   color: #000000;
@@ -134,11 +121,6 @@ a {
   .article-title.preview {
     font-size: 44.8px;
     line-height: 42px; }
-  @media (max-width: 450px) {
-    .article-title {
-      font-size: 33.6px;
-      line-height: 36px;
-      padding: 15px 7.5px 0 7.5px; } }
 
 .article-subtitle {
   font-family: "SourceSansPro-Bold", "source-sans-pro", Helvetica, Arial, sans-serif;
@@ -150,11 +132,6 @@ a {
   .article-subtitle.preview {
     font-size: 22.4px;
     line-height: 24px; }
-  @media (max-width: 450px) {
-    .article-subtitle {
-      font-size: 16.8px;
-      line-height: 18px;
-      padding: 15px 7.5px 0 7.5px; } }
 
 .article-intro {
   font-family: "AlegreyaSans-Medium", Helvetica, Arial, sans-serif;
@@ -164,11 +141,6 @@ a {
   .article-intro.preview {
     font-size: 20.8px;
     line-height: 24px; }
-  @media (max-width: 450px) {
-    .article-intro {
-      font-size: 15.6px;
-      line-height: 18px;
-      padding: 15px 7.5px 0 7.5px; } }
 
 .article-author {
   font-family: "AlegreyaSans-ExtraBold", Helvetica, Arial, sans-serif;
@@ -176,10 +148,6 @@ a {
   font-size: 18px;
   color: #333332;
   padding: 30px 15px; }
-  @media (max-width: 450px) {
-    .article-author {
-      font-size: 10.8px;
-      padding: 15px 7.5px; } }
 
 .article-header {
   font-family: "AlegreyaSans-Bold", Helvetica, Arial, sans-serif;
@@ -188,35 +156,19 @@ a {
   color: #CE242D;
   text-transform: uppercase;
   padding: 30px 15px 0 15px; }
-  @media (max-width: 450px) {
-    .article-header {
-      font-size: 13.2px;
-      line-height: 18px;
-      padding: 15px 7.5px 0 7.5px; } }
 
 .article-paragraph {
   font-family: "AGaramondPro-Regular", "Garamond", serif;
   font-size: 21px;
   color: #333332;
   padding: 0 15px; }
-  @media (max-width: 450px) {
-    .article-paragraph {
-      font-size: 12.6px;
-      line-height: 18px;
-      padding: 0 7.5px; } }
 
 figcaption {
   font-size: 10px;
   line-height: 12px; }
-  @media (max-width: 450px) {
-    figcaption {
-      font-size: 6px; } }
 
 .article-end {
   padding: 30px 15px 0 15px; }
-  @media (max-width: 450px) {
-    .article-end {
-      padding: 15px 7.5px 0 7.5px; } }
 
 .image-large {
   position: fixed;
@@ -256,7 +208,7 @@ figcaption {
 
 .card {
   position: relative;
-  max-width: 100%;
+  width: 100%;
   max-width: 335px;
   height: calc(100% - 30px);
   max-height: 760px;
@@ -266,16 +218,9 @@ figcaption {
     content: "";
     display: table;
     clear: both; }
-  @media (max-width: 450px) {
-    .card {
-      height: calc(100% - 15px);
-      margin: 10px auto; } }
 
 .shared-container {
   margin: 5px 15px; }
-  @media (max-width: 450px) {
-    .shared-container {
-      margin: 2.5px 10px; } }
 
 .shared-content {
   background-color: #FFFFFF;
@@ -290,9 +235,6 @@ figcaption {
   display: flex;
   position: relative;
   align-items: center; }
-  @media (max-width: 450px) {
-    .shared-by {
-      padding: 0 5px; } }
 
 .genre {
   border: 1px solid #343C59;
@@ -310,13 +252,10 @@ figcaption {
   position: absolute;
   left: 15px;
   top: 39px;
-  width: 26px;
+  width: 25px;
   height: 2px;
   z-index: 1;
   background: #343C59; }
-  @media (max-width: 450px) {
-    .line {
-      left: 5px; } }
 
 .profiles {
   display: flex;
@@ -345,18 +284,13 @@ figcaption {
     content: "";
     display: table;
     clear: both; }
-  @media (max-width: 450px) {
-    .preview-container {
-      margin: 2.5px 5px; } }
 
 .preview-container {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  top: 110px; }
-
-.preview-content {
+  top: 110px;
   background-color: #FFFFFF;
   border: 1px solid #DBDBDB;
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.09); }
@@ -378,9 +312,6 @@ figcaption {
     height: 15px;
     width: auto;
     margin-left: 10px; }
-    @media (max-width: 450px) {
-      .provider .revu-logo {
-        margin-left: 5px; } }
 
 .price {
   line-height: 44px;
@@ -424,14 +355,6 @@ figcaption {
       display: none; }
     .article-navigation .close {
       border-right: 1px solid #DBDBDB; } }
-  @media (max-width: 450px) {
-    .article-navigation {
-      height: 30px; }
-      .article-navigation .btn {
-        width: 30px;
-        height: 30px; }
-        .article-navigation .btn img {
-          max-width: 30%; } }
 
 .article-info {
   flex-grow: 1; }
@@ -445,6 +368,7 @@ figcaption {
   @media (max-width: 450px) {
     .provider-info {
       left: calc(50% - 30px);
+      top: 10px;
       width: 60px; }
       .provider-info img {
         width: 60px; } }
@@ -452,10 +376,6 @@ figcaption {
 .content {
   padding-top: 44px;
   padding-bottom: 88px; }
-  @media (max-width: 450px) {
-    .content {
-      padding-top: 30px;
-      padding-bottom: 60px; } }
 
 .article {
   background-color: #FFFFFF;
