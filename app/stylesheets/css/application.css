@@ -226,9 +226,9 @@ figcaption {
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
   opacity: 0;
-  transition: opacity .5s ease-in-out;
   overflow: hidden;
-  z-index: 20; }
+  z-index: 20;
+  transition: opacity .3s ease-in-out; }
 
 .image-large img {
   margin: auto;
@@ -240,7 +240,7 @@ figcaption {
   max-height: 0;
   max-width: 0;
   box-sizing: border-box;
-  transition: .5s ease-in-out; }
+  transition: .3s ease-in-out; }
 
 .image-large:target {
   opacity: 1;
@@ -299,7 +299,12 @@ figcaption {
   border-radius: 4px;
   padding: 0 5px;
   height: 17px;
-  margin-right: 5px; }
+  margin-right: 5px;
+  transition: all 0.3s ease; }
+  .genre:hover {
+    background-color: #343C59;
+    color: #FFFFFF;
+    transition: all 0.3s ease; }
 
 .line {
   position: absolute;
@@ -349,8 +354,7 @@ figcaption {
   left: 0;
   right: 0;
   bottom: 0;
-  top: 110px;
-  transition: top 0.3s cubic-bezier(0.71, 0.01, 0.04, 1.6); }
+  top: 110px; }
 
 .preview-content {
   background-color: #FFFFFF;
@@ -417,15 +421,15 @@ figcaption {
       border-left: none; }
   @media (max-width: 800px) {
     .article-navigation .share, .article-navigation .pin, .article-navigation .article-info {
-      display: none; } }
+      display: none; }
+    .article-navigation .close {
+      border-right: 1px solid #DBDBDB; } }
   @media (max-width: 450px) {
     .article-navigation {
       height: 30px; }
       .article-navigation .btn {
         width: 30px;
         height: 30px; }
-        .article-navigation .btn.close {
-          border-right: 1px solid #DBDBDB; }
         .article-navigation .btn img {
           max-width: 30%; } }
 

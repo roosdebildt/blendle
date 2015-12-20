@@ -2,7 +2,7 @@
 // VARIABLES AND MIXINS
 //
 $mobile-breakpoint:            450px;
-$desktop-breakpoint:            800px;
+$desktop-breakpoint:           800px;
 
 // paddings and margins
 $standard:                     30px;
@@ -15,8 +15,8 @@ $border:                       1px solid $light-grey;
 $border-radius:                4px;
 
 // article
-$nav-bar-height:              44px;
-$article-width:               635px;
+$nav-bar-height:               44px;
+$article-width:                635px;
 
 // clearfix
 @mixin clearfix {

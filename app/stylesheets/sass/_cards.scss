@@ -66,6 +66,13 @@ $border-radius:                4px;
   padding: 0 5px;
   height: 17px;
   margin-right: 5px;
+  @include ease;
+
+  &:hover {
+    background-color: $dark-blue;
+    color: $white;
+    @include ease;
+  }
 }
 
 .line {
@@ -125,8 +132,6 @@ $border-radius:                4px;
   right: 0;
   bottom: 0;
   top: 110px;
-  // TODO: check-transition
-  transition: top .3s cubic-bezier(.71, .01, .04, 1.6);
 }
 
 .preview-content {

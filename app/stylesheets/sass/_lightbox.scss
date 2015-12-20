@@ -11,9 +11,9 @@
   width: 100%;
   background: $overlay;
   opacity: 0;
-  transition: opacity .5s ease-in-out;
   overflow: hidden;
   z-index: 20;
+  @include opacity-ease;
 }
 
 // large image
@@ -27,7 +27,7 @@
   max-height: 0;
   max-width: 0;
   box-sizing: border-box;
-  transition: .5s ease-in-out;
+  @include ease-in-out;
 }
 
 // uses :target pseudo-class for the animations upon clicking

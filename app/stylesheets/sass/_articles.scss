@@ -29,23 +29,24 @@ $article-width:               635px;
     }
   }
 
+  // collapsing navbar for tablet
   @media (max-width: $desktop-breakpoint) {
     .share, .pin, .article-info {
       display: none;
     }
+
+    .close {
+      border-right: $border;
+    }
   }
 
-  // collapsing navbar for mobile
+  // minimizing navbar for mobile
   @media (max-width: $mobile-breakpoint) {
     height: $standard;
 
     .btn {
       width: $standard;
       height: $standard;
-
-      &.close{
-        border-right: $border
-      }
 
       img {
         max-width: 30%;

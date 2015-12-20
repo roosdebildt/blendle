@@ -1,0 +1,15 @@
+//
+// ANIMATION EFFECTS
+//
+
+@mixin ease {
+  transition: all 0.3s ease;
+}
+
+@mixin ease-in-out {
+  transition: .3s ease-in-out;
+}
+
+@mixin opacity-ease {
+  transition: opacity .3s ease-in-out;
+}
