@@ -77,9 +77,10 @@ html, body {
   }
 }
 
-img {
-  max-width: 100%;
-  max-height: 100%;
+.btn {
+  @include flex;
+  justify-content: center;
+  border-left: $border;
 }
 
 //
@@ -192,6 +193,7 @@ img {
 
   .btn {
     width: $card-nav-height;
+    height: $card-nav-height;
   }
 }
 
@@ -239,19 +241,27 @@ img {
     padding-top: 65%;
 }
 
-// article styles
+//
+// VARIABLES AND MIXINS
+//
 // top navigation bar
-.navigation {
+.article-navigation {
   line-height: $nav-bar-height;
   height: $nav-bar-height;
+  @include flex;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  // TODO: hier naar kijken
   z-index: 10;
   background-color: $white;
   border-bottom: $border;
+
+  .btn {
+    width: $nav-bar-height;
+    height: $nav-bar-height;
+  }
 }
 
 .article-info {
@@ -259,22 +269,12 @@ img {
 }
 
 .provider-info {
-  width: 100%;
-  @include flex;
   position: fixed;
-  z-index: 2;
   top: 2px;
-}
-
-.btn {
-  width: $nav-bar-height;
-  @include flex;
-  justify-content: center;
-  border-left: $border;
-}
-
-.btn:hover {
-  // TODO: inline-svg's to make hover effects
+  // to center
+  left: calc(50% - 55px);
+  width: 110px;
+  z-index: 10;
 }
 
 // main content
@@ -290,17 +290,18 @@ img {
   height: 100%;
 }
 
-.article-main-image {
-    background-image: url('http://localhost:3000/images/image_main.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 0;
-    // TODO: check padding-top
-    padding-top: 50%;
+.article-main-image img {
+  width: 100%;
+  height: auto;
+}
+
+.article-container {
+  @include flex;
+  justify-content: center;
 }
 
 .article-content {
+  padding-top: $standard*2;
   width: 100%;
   max-width: $article-width;
 }
@@ -313,10 +314,11 @@ img {
   max-width: ($article-width/2);
 }
 
-// TODO: have a look at max-width of images after nav collapse
 .article-image {
   padding: $half 0;
   text-align: right;
+  @include flex;
+  justify-content: center;
 }
 
 .stacked {
