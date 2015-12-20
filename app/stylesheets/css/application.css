@@ -85,6 +85,7 @@ html, body {
 .card {
   position: relative;
   max-width: 100%;
+  max-width: 335px;
   height: calc(100% - 30px);
   max-height: 760px;
   margin: 15px auto;
@@ -93,17 +94,22 @@ html, body {
     content: "";
     display: table;
     clear: both; }
-  @media (min-width: 450px) {
+  @media (max-width: 450px) {
     .card {
-      max-width: 335px; } }
+      height: calc(100% - 15px);
+      margin: 10px auto; } }
 
 .shared-container {
   margin: 5px 15px; }
+  @media (max-width: 450px) {
+    .shared-container {
+      margin: 2.5px 10px; } }
 
 .shared-content {
   background-color: #FFFFFF;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.07);
-  border-radius: 4px; }
+  border-radius: 4px;
+  min-height: 150px; }
 
 .shared-by {
   height: 40px;
@@ -112,6 +118,9 @@ html, body {
   display: flex;
   position: relative;
   align-items: center; }
+  @media (max-width: 450px) {
+    .shared-by {
+      padding: 0 5px; } }
 
 .line {
   position: absolute;
@@ -121,6 +130,9 @@ html, body {
   height: 2px;
   z-index: 1;
   background: #343C59; }
+  @media (max-width: 450px) {
+    .line {
+      left: 5px; } }
 
 .profiles {
   display: flex;
@@ -149,6 +161,9 @@ html, body {
     content: "";
     display: table;
     clear: both; }
+  @media (max-width: 450px) {
+    .preview-container {
+      margin: 2.5px 5px; } }
 
 .preview-container {
   position: absolute;
@@ -188,6 +203,9 @@ html, body {
     height: 15px;
     width: auto;
     margin-left: 10px; }
+    @media (max-width: 450px) {
+      .provider .revu-logo {
+        margin-left: 5px; } }
 
 .price {
   line-height: 44px;
@@ -239,7 +257,7 @@ html, body {
 
 .content {
   padding-top: 44px;
-  padding-bottom: 176px; }
+  padding-bottom: 88px; }
 
 .article {
   background-color: #FFFFFF;
@@ -294,13 +312,6 @@ strong {
 a {
   text-decoration: none; }
 
-figcaption {
-  font-size: 10px;
-  line-height: 12px; }
-  @media (max-width: 450px) {
-    figcaption {
-      font-size: 6px; } }
-
 .genre {
   font-size: 11px;
   line-height: 17px;
@@ -347,21 +358,23 @@ figcaption {
   @media (max-width: 450px) {
     .article-title {
       font-size: 33.6px;
-      line-height: 36px; } }
+      line-height: 36px;
+      padding: 15px 7.5px 0 7.5px; } }
 
 .article-subtitle {
   font-family: "SourceSansPro-Bold";
   font-size: 28px;
   color: #CE242D;
   text-transform: uppercase;
-  padding: 0 15px; }
+  padding: 30px 15px 0 15px; }
   .article-subtitle.preview {
     font-size: 22.4px;
     line-height: 24px; }
   @media (max-width: 450px) {
     .article-subtitle {
       font-size: 16.8px;
-      line-height: 18px; } }
+      line-height: 18px;
+      padding: 15px 7.5px 0 7.5px; } }
 
 .article-intro {
   font-family: "AlegreyaSans-Medium";
@@ -374,7 +387,8 @@ figcaption {
   @media (max-width: 450px) {
     .article-intro {
       font-size: 15.6px;
-      line-height: 18px; } }
+      line-height: 18px;
+      padding: 15px 7.5px 0 7.5px; } }
 
 .article-author {
   font-family: "AlegreyaSans-ExtraBold";
@@ -383,7 +397,8 @@ figcaption {
   padding: 30px 15px; }
   @media (max-width: 450px) {
     .article-author {
-      font-size: 10.8px; } }
+      font-size: 10.8px;
+      padding: 15px 7.5px; } }
 
 .article-header {
   font-family: "AlegreyaSans-Bold";
@@ -394,7 +409,8 @@ figcaption {
   @media (max-width: 450px) {
     .article-header {
       font-size: 13.2px;
-      line-height: 18px; } }
+      line-height: 18px;
+      padding: 15px 7.5px 0 7.5px; } }
 
 .article-paragraph {
   font-family: "AGaramondPro-Regular";
@@ -404,10 +420,21 @@ figcaption {
   @media (max-width: 450px) {
     .article-paragraph {
       font-size: 12.6px;
-      line-height: 18px; } }
+      line-height: 18px;
+      padding: 0 7.5px; } }
+
+figcaption {
+  font-size: 10px;
+  line-height: 12px; }
+  @media (max-width: 450px) {
+    figcaption {
+      font-size: 6px; } }
 
 .article-end {
   padding: 30px 15px 0 15px; }
+  @media (max-width: 450px) {
+    .article-end {
+      padding: 15px 7.5px 0 7.5px; } }
 
 .image-large {
   position: fixed;

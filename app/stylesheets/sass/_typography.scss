@@ -1,34 +1,43 @@
-// basic typography
-$base-font-size:        14px;
+//
+// TYPOGRAPHY VARIABLES
+//
+$base-font-size:               14px;
 
 // cards
-$card-font-size:        12px;
-$genre-font-size:       11px;
+$card-font-size:               12px;
+$genre-font-size:              11px;
 
 // articles
-$subtitle-font-size:    28px;
-$title-font-size:       56px;
-$intro-font-size:       26px;
-$author-font-size:      18px;
-$paragraph-font-size:   21px;
-$header-font-size:      22px;
-$caption-font-size:     10px;
+$subtitle-font-size:           28px;
+$title-font-size:              56px;
+$intro-font-size:              26px;
+$author-font-size:             18px;
+$paragraph-font-size:          21px;
+$header-font-size:             22px;
+$caption-font-size:            10px;
 
 // line-heights
-$base-line-height:      30px;
-$title-line-height:     ($base-line-height*2);
-
-// padding
-$side-padding:          0 15px;
-$top-padding:           30px 15px 0 15px;
-$top-bottom-padding:    30px 15px;
+$base-line-height:             30px;
+$title-line-height:            ($base-line-height*2);
 
 // mobile
-$mobile:                0.6;
+$mobile:                       0.6;
 
 // preview
-$preview:               0.8;
+$preview:                      0.8;
 
+// padding
+$side-padding:                 0 $half;
+$top-padding:                  $standard $half 0 $half;
+$top-bottom-padding:           $standard $half;
+
+$mobile-side-padding:          0 ($half/2);
+$mobile-top-padding:           $half ($half/2) 0 ($half/2);
+$mobile-top-bottom-padding:    $half ($half/2);
+
+//
+// BASE
+//
 body {
   font-family: "Proxima Nova";
   font-size: $base-font-size;
@@ -49,16 +58,9 @@ a {
   text-decoration: none;
 }
 
-figcaption {
-  font-size: $caption-font-size;
-  line-height: $caption-font-size*1.2;
-
-  @media (max-width: $mobile-breakpoint) {
-    font-size: $caption-font-size*$mobile;
-  }
-}
-
-// card styles
+//
+// CARDS
+//
 .genre {
   font-size: $genre-font-size;
   line-height: 17px;
@@ -96,7 +98,9 @@ figcaption {
   line-height: ($base-line-height/2);
 }
 
-// article styles
+//
+// ARTICLES
+//
 .article-info {
   padding-left: 15px;
 }
@@ -117,6 +121,7 @@ figcaption {
   @media (max-width: $mobile-breakpoint) {
     font-size: $title-font-size*$mobile;
     line-height: $title-line-height*$mobile;
+    padding: $mobile-top-padding;
   }
 }
 
@@ -125,7 +130,7 @@ figcaption {
   font-size: $subtitle-font-size;
   color: $revue-red;
   text-transform: uppercase;
-  padding: $side-padding;
+  padding: $top-padding;
 
   &.preview {
     font-size: $subtitle-font-size*$preview;
@@ -135,6 +140,7 @@ figcaption {
   @media (max-width: $mobile-breakpoint) {
     font-size: $subtitle-font-size*$mobile;
     line-height: $base-line-height*$mobile;
+    padding: $mobile-top-padding;
   }
 }
 
@@ -152,6 +158,7 @@ figcaption {
   @media (max-width: $mobile-breakpoint) {
     font-size: $intro-font-size*$mobile;
     line-height: $base-line-height*$mobile;
+    padding: $mobile-top-padding;
   }
 }
 
@@ -163,6 +170,7 @@ figcaption {
 
   @media (max-width: $mobile-breakpoint) {
     font-size: $author-font-size*$mobile;
+    padding: $mobile-top-bottom-padding;
   }
 }
 
@@ -176,6 +184,7 @@ figcaption {
   @media (max-width: $mobile-breakpoint) {
     font-size: $header-font-size*$mobile;
     line-height: $base-line-height*$mobile;
+    padding: $mobile-top-padding;
   }
 }
 
@@ -188,9 +197,23 @@ figcaption {
   @media (max-width: $mobile-breakpoint) {
     font-size: $paragraph-font-size*$mobile;
     line-height: $base-line-height*$mobile;
+    padding: $mobile-side-padding;
+  }
+}
+
+figcaption {
+  font-size: $caption-font-size;
+  line-height: $caption-font-size*1.2;
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: $caption-font-size*$mobile;
   }
 }
 
 .article-end {
   padding: $top-padding;
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: $mobile-top-padding;
+  }
 }

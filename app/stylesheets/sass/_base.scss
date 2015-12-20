@@ -1,25 +1,25 @@
 //
 // VARIABLES AND MIXINS
 //
-$mobile-breakpoint:    450px;
+$mobile-breakpoint:            450px;
 
 // paddings and margins
-$standard:              30px;
-$half:                  15px;
-$small:                 10px;
-$extra-small:           5px;
+$standard:                     30px;
+$half:                         15px;
+$small:                        10px;
+$extra-small:                  5px;
 
 // border
-$border:                1px solid $light-grey;
+$border:                       1px solid $light-grey;
 
 // card
-$card-nav-height:       40px;
-$card-width:            335px;
-$border-radius:         4px;
+$card-nav-height:              40px;
+$card-width:                   335px;
+$border-radius:                4px;
 
 // article
-$nav-bar-height:        44px;
-$article-width:         635px;
+$nav-bar-height:              44px;
+$article-width:               635px;
 
 // clearfix
 @mixin clearfix {
@@ -94,26 +94,34 @@ html, body {
 .card {
   position: relative;
   max-width: 100%;
+  max-width: $card-width;
   height: calc(100% - 30px);
   max-height: 760px;
   margin: $half auto;
   overflow-y: hidden;
   @include clearfix;
 
-  @media (min-width: $mobile-breakpoint) {
-    max-width: $card-width;
+  @media (max-width: $mobile-breakpoint) {
+    height: calc(100% - 15px);
+    margin: $small auto;
   }
 }
 
 // shared
 .shared-container {
   margin: $extra-small $half;
+
+  @media (max-width: $mobile-breakpoint) {
+    margin: ($extra-small/2) $small;
+  }
 }
 
 .shared-content {
   background-color: $white;
   box-shadow: $shadow-small;
   border-radius: $border-radius;
+  // for mobile
+  min-height: 150px;
 }
 
 .shared-by {
@@ -122,6 +130,10 @@ html, body {
   padding: 0 $small;
   @include flex;
   align-items: center;
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 0 $extra-small;
+  }
 }
 
 .line {
@@ -132,6 +144,10 @@ html, body {
   height: 2px;
   z-index: 1;
   background: $dark-blue;
+
+  @media (max-width: $mobile-breakpoint) {
+    left: $extra-small;
+  }
 }
 
 .profiles {
@@ -164,6 +180,10 @@ html, body {
   margin: $extra-small $small;
   overflow: hidden;
   @include clearfix;
+
+  @media (max-width: $mobile-breakpoint) {
+    margin: ($extra-small/2) $extra-small;
+  }
 }
 
 .preview-container {
@@ -206,6 +226,10 @@ html, body {
     height: $half;
     width: auto;
     margin-left: $small;
+
+    @media (max-width: $mobile-breakpoint) {
+      margin-left: $extra-small;
+    }
   }
 }
 
@@ -275,11 +299,10 @@ html, body {
 // main content
 .content {
   padding-top: $nav-bar-height;
-  padding-bottom: ($nav-bar-height*4);
+  padding-bottom: ($nav-bar-height*2);
 }
 
 // articles
-
 .article {
   background-color: $white;
   height: 100%;
@@ -296,7 +319,6 @@ html, body {
 }
 
 .article-content {
-  // padding-top: $nav-bar-height;
   max-width: $article-width;
 }
 
