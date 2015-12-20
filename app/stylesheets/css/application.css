@@ -45,98 +45,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body {
-  font-family: "Proxima Nova";
-  font-size: 14px;
-  line-height: 30px;
-  color: #8B8B8B; }
-
-strong {
-  font-weight: bold; }
-
-a {
-  text-decoration: none; }
-
-figcaption {
-  font-size: 10px;
-  line-height: 12.14px; }
-
-.genre {
-  font-size: 11.2px;
-  line-height: 17px;
-  color: #343C59;
-  border: 1px solid #343C59;
-  border-radius: 4px;
-  padding: 0 5px;
-  height: 17px;
-  margin-right: 5px; }
-
-.likes {
-  color: #000000;
-  font-size: 12px; }
-
-.price {
-  font-size: 12px; }
-
-.shared-quote {
-  color: #000000;
-  line-height: 15px; }
-
-.article-info {
-  padding-left: 15px; }
-
-.article-title {
-  font-family: "SourceSansPro-Black", sans-serif;
-  font-size: 56px;
-  line-height: 60px;
-  color: #000000;
-  text-transform: uppercase;
-  padding: 0 15px; }
-  .article-title.preview {
-    font-size: 44.8px;
-    line-height: 36px; }
-
-.article-subtitle {
-  font-family: "SourceSansPro-Bold";
-  font-size: 28px;
-  color: #CE242D;
-  text-transform: uppercase;
-  padding: 0 15px; }
-  .article-subtitle.preview {
-    font-size: 22.4px;
-    line-height: 21px; }
-
-.article-intro {
-  font-family: "AlegreyaSans-Medium";
-  font-size: 26px;
-  color: #000000;
-  padding: 30px 15px 0 15px; }
-  .article-intro.preview {
-    font-size: 20.8px;
-    line-height: 24px; }
-
-.article-author {
-  font-family: "AlegreyaSans-ExtraBold";
-  font-size: 18px;
-  color: #333332;
-  padding: 30px 15px; }
-
-.article-header {
-  font-family: "AlegreyaSans-Bold";
-  font-size: 22px;
-  color: #CE242D;
-  text-transform: uppercase;
-  padding: 30px 15px 0 15px; }
-
-.article-paragraph {
-  font-family: "AGaramondPro-Regular";
-  font-size: 21px;
-  color: #333332;
-  padding: 0 15px; }
-
-.article-end {
-  padding: 30px 15px 0 15px; }
-
 html, body {
   height: 100%; }
 
@@ -185,7 +93,7 @@ html, body {
     content: "";
     display: table;
     clear: both; }
-  @media (min-width: 500px) {
+  @media (min-width: 450px) {
     .card {
       max-width: 335px; } }
 
@@ -300,14 +208,6 @@ html, body {
   pointer-events: none;
   background: linear-gradient(to top, #FFFFFF 5%, rgba(255, 255, 255, 0) 100%); }
 
-.article-preview-image {
-  background-image: url("http://localhost:3000/images/image_preview.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 0;
-  padding-top: 65%; }
-
 .article-navigation {
   line-height: 44px;
   height: 44px;
@@ -324,6 +224,8 @@ html, body {
   .article-navigation .btn {
     width: 44px;
     height: 44px; }
+    .article-navigation .btn:first-child {
+      border: none; }
 
 .article-info {
   flex-grow: 1; }
@@ -353,15 +255,16 @@ html, body {
   justify-content: center; }
 
 .article-content {
-  padding-top: 60px;
-  width: 100%;
   max-width: 635px; }
 
 .article-title {
-  max-width: 529.16667px; }
+  max-width: 529.16667px;
+  word-wrap: break-word; }
 
 .article-subtitle {
-  max-width: 317.5px; }
+  max-width: 100%;
+  max-width: 317.5px;
+  word-wrap: break-word; }
 
 .article-image {
   padding: 15px 0;
@@ -369,9 +272,142 @@ html, body {
   display: flex;
   position: relative;
   justify-content: center; }
+  .article-image img {
+    max-width: 100%; }
 
 .stacked {
   padding-top: 0; }
+
+body {
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  line-height: 30px;
+  color: #8B8B8B; }
+  @media (max-width: 450px) {
+    body {
+      font-size: 8.4px;
+      line-height: 18px; } }
+
+strong {
+  font-weight: bold; }
+
+a {
+  text-decoration: none; }
+
+figcaption {
+  font-size: 10px;
+  line-height: 12px; }
+  @media (max-width: 450px) {
+    figcaption {
+      font-size: 6px; } }
+
+.genre {
+  font-size: 11px;
+  line-height: 17px;
+  color: #343C59;
+  border: 1px solid #343C59;
+  border-radius: 4px;
+  padding: 0 5px;
+  height: 17px;
+  margin-right: 5px; }
+  @media (max-width: 450px) {
+    .genre {
+      font-size: 7.2px; } }
+
+.likes {
+  color: #000000;
+  font-size: 12px; }
+  @media (max-width: 450px) {
+    .likes {
+      font-size: 7.2px; } }
+
+.price {
+  font-size: 12px; }
+  @media (max-width: 450px) {
+    .price {
+      font-size: 7.2px; } }
+
+.shared-quote {
+  color: #000000;
+  line-height: 15px; }
+
+.article-info {
+  padding-left: 15px; }
+
+.article-title {
+  font-family: "SourceSansPro-Black", sans-serif;
+  font-size: 56px;
+  line-height: 60px;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 0 15px; }
+  .article-title.preview {
+    font-size: 44.8px;
+    line-height: 42px; }
+  @media (max-width: 450px) {
+    .article-title {
+      font-size: 33.6px;
+      line-height: 36px; } }
+
+.article-subtitle {
+  font-family: "SourceSansPro-Bold";
+  font-size: 28px;
+  color: #CE242D;
+  text-transform: uppercase;
+  padding: 0 15px; }
+  .article-subtitle.preview {
+    font-size: 22.4px;
+    line-height: 24px; }
+  @media (max-width: 450px) {
+    .article-subtitle {
+      font-size: 16.8px;
+      line-height: 18px; } }
+
+.article-intro {
+  font-family: "AlegreyaSans-Medium";
+  font-size: 26px;
+  color: #000000;
+  padding: 30px 15px 0 15px; }
+  .article-intro.preview {
+    font-size: 20.8px;
+    line-height: 24px; }
+  @media (max-width: 450px) {
+    .article-intro {
+      font-size: 15.6px;
+      line-height: 18px; } }
+
+.article-author {
+  font-family: "AlegreyaSans-ExtraBold";
+  font-size: 18px;
+  color: #333332;
+  padding: 30px 15px; }
+  @media (max-width: 450px) {
+    .article-author {
+      font-size: 10.8px; } }
+
+.article-header {
+  font-family: "AlegreyaSans-Bold";
+  font-size: 22px;
+  color: #CE242D;
+  text-transform: uppercase;
+  padding: 30px 15px 0 15px; }
+  @media (max-width: 450px) {
+    .article-header {
+      font-size: 13.2px;
+      line-height: 18px; } }
+
+.article-paragraph {
+  font-family: "AGaramondPro-Regular";
+  font-size: 21px;
+  color: #333332;
+  padding: 0 15px; }
+  @media (max-width: 450px) {
+    .article-paragraph {
+      font-size: 12.6px;
+      line-height: 18px; } }
+
+.article-end {
+  padding: 30px 15px 0 15px; }
 
 .image-large {
   position: fixed;

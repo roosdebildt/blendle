@@ -1,9 +1,13 @@
 // basic typography
 $base-font-size:        14px;
-$subtitle-font-size:    ($base-font-size*2);
-$title-font-size:       ($base-font-size*4);
 
-// in order of appearance
+// cards
+$card-font-size:        12px;
+$genre-font-size:       11px;
+
+// articles
+$subtitle-font-size:    28px;
+$title-font-size:       56px;
 $intro-font-size:       26px;
 $author-font-size:      18px;
 $paragraph-font-size:   21px;
@@ -15,15 +19,26 @@ $base-line-height:      30px;
 $title-line-height:     ($base-line-height*2);
 
 // padding
-$standard-padding:      0 15px;
+$side-padding:          0 15px;
 $top-padding:           30px 15px 0 15px;
 $top-bottom-padding:    30px 15px;
+
+// mobile
+$mobile:                0.6;
+
+// preview
+$preview:               0.8;
 
 body {
   font-family: "Proxima Nova";
   font-size: $base-font-size;
   line-height: $base-line-height;
   color: $cool-grey;
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: $base-font-size*$mobile;
+    line-height: $base-line-height*$mobile;
+  }
 }
 
 strong {
@@ -36,28 +51,44 @@ a {
 
 figcaption {
   font-size: $caption-font-size;
-  line-height: 12.14px;
+  line-height: $caption-font-size*1.2;
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: $caption-font-size*$mobile;
+  }
 }
 
 // card styles
 .genre {
-  font-size: $base-font-size*0.8;
+  font-size: $genre-font-size;
   line-height: 17px;
   color: $dark-blue;
   border: 1px solid $dark-blue;
-  border-radius: 4px;
+  border-radius: $border-radius;
   padding: 0 5px;
   height: 17px;
   margin-right: 5px;
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: $card-font-size*$mobile;
+  }
 }
 
 .likes {
   color: $black;
-  font-size: 12px;
+  font-size: $card-font-size;
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: $card-font-size*$mobile;
+  }
 }
 
 .price {
-  font-size: 12px;
+  font-size: $card-font-size;
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: $card-font-size*$mobile;
+  }
 }
 
 .shared-quote {
@@ -76,11 +107,16 @@ figcaption {
   line-height: $title-line-height;
   color: $black;
   text-transform: uppercase;
-  padding: $standard-padding;
+  padding: $side-padding;
 
   &.preview {
-    font-size: $title-font-size*0.8;
-    line-height: $title-line-height*0.6;
+    font-size: $title-font-size*$preview;
+    line-height: $title-line-height*0.7;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: $title-font-size*$mobile;
+    line-height: $title-line-height*$mobile;
   }
 }
 
@@ -89,11 +125,16 @@ figcaption {
   font-size: $subtitle-font-size;
   color: $revue-red;
   text-transform: uppercase;
-  padding: $standard-padding;
+  padding: $side-padding;
 
   &.preview {
-    font-size: $subtitle-font-size*0.8;
-    line-height: $base-line-height*0.7;
+    font-size: $subtitle-font-size*$preview;
+    line-height: $base-line-height*$preview;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: $subtitle-font-size*$mobile;
+    line-height: $base-line-height*$mobile;
   }
 }
 
@@ -104,8 +145,13 @@ figcaption {
   padding: $top-padding;
 
   &.preview {
-    font-size: $intro-font-size*0.8;
-    line-height: $base-line-height*0.8;
+    font-size: $intro-font-size*$preview;
+    line-height: $base-line-height*$preview;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: $intro-font-size*$mobile;
+    line-height: $base-line-height*$mobile;
   }
 }
 
@@ -114,6 +160,10 @@ figcaption {
   font-size: $author-font-size;
   color: $dark-grey;
   padding: $top-bottom-padding;
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: $author-font-size*$mobile;
+  }
 }
 
 .article-header {
@@ -122,13 +172,23 @@ figcaption {
   color: $revue-red;
   text-transform: uppercase;
   padding: $top-padding;
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: $header-font-size*$mobile;
+    line-height: $base-line-height*$mobile;
+  }
 }
 
 .article-paragraph {
   font-family: "AGaramondPro-Regular";
   font-size: $paragraph-font-size;
   color: $dark-grey;
-  padding: $standard-padding;
+  padding: $side-padding;
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: $paragraph-font-size*$mobile;
+    line-height: $base-line-height*$mobile;
+  }
 }
 
 .article-end {

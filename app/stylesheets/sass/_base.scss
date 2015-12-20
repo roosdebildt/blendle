@@ -1,7 +1,7 @@
 //
 // VARIABLES AND MIXINS
 //
-$mobile-breakpoint:    500px;
+$mobile-breakpoint:    450px;
 
 // paddings and margins
 $standard:              30px;
@@ -231,19 +231,10 @@ html, body {
   background: linear-gradient(to top, $white 5%, rgba(255, 255, 255, 0) 100%);
 }
 
-.article-preview-image {
-    background-image: url('http://localhost:3000/images/image_preview.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 0;
-    // TODO: check padding-top
-    padding-top: 65%;
-}
+//
+// ARTICLE STYLES
+//
 
-//
-// VARIABLES AND MIXINS
-//
 // top navigation bar
 .article-navigation {
   line-height: $nav-bar-height;
@@ -261,6 +252,10 @@ html, body {
   .btn {
     width: $nav-bar-height;
     height: $nav-bar-height;
+
+    &:first-child {
+      border: none;
+    }
   }
 }
 
@@ -301,17 +296,19 @@ html, body {
 }
 
 .article-content {
-  padding-top: $standard*2;
-  width: 100%;
+  // padding-top: $nav-bar-height;
   max-width: $article-width;
 }
 
 .article-title {
   max-width: (($article-width/6)*5);
+  word-wrap: break-word;
 }
 
 .article-subtitle {
+  max-width: 100%;
   max-width: ($article-width/2);
+  word-wrap: break-word;
 }
 
 .article-image {
@@ -319,6 +316,10 @@ html, body {
   text-align: right;
   @include flex;
   justify-content: center;
+
+  img {
+    max-width: 100%;
+  }
 }
 
 .stacked {
