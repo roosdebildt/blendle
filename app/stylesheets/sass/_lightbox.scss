@@ -1,21 +1,22 @@
-//  image lightbox styles
+//
+// IMAGE LIGHTBOX STYLES
+//
 
+// overlay
 .image-large {
   position: fixed;
   left: 50%;
   top: 50%;
-  // TODO: have a look at transforms
   transform: translate(-50%);
   width: 100%;
-  background: rgba(0,0,0,.7);
+  background: $overlay;
   opacity: 0;
   transition: opacity .5s ease-in-out;
   overflow: hidden;
-  // TODO: check z-index
   z-index: 20;
 }
 
-// TODO: have a look at centering positioning
+// large image
 .image-large img {
   margin: auto;
   position: absolute;

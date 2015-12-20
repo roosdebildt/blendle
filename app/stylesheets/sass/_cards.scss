@@ -1,0 +1,178 @@
+//
+// CARD STYLES
+//
+
+// variables
+$card-nav-height:              40px;
+$card-width:                   335px;
+$border-radius:                4px;
+
+// base styles
+.cards {
+  background-color: $lightest-grey;
+}
+
+// fluid, vertically centered card
+.card {
+  position: relative;
+  max-width: 100%;
+  max-width: $card-width;
+  height: calc(100% - 30px);
+  max-height: 760px;
+  margin: $half auto;
+  overflow-y: hidden;
+  @include clearfix;
+
+  // decreases margin for mobile
+  @media (max-width: $mobile-breakpoint) {
+    height: calc(100% - 15px);
+    margin: $small auto;
+  }
+}
+
+// shared
+.shared-container {
+  margin: $extra-small $half;
+
+  // decreases margin for mobile
+  @media (max-width: $mobile-breakpoint) {
+    margin: ($extra-small/2) $small;
+  }
+}
+
+.shared-content {
+  // background-color: $white;
+  box-shadow: $shadow-small;
+  border-radius: $border-radius;
+  min-height: 150px;
+}
+
+.shared-by {
+  height: $card-nav-height;
+  border-bottom: $border;
+  padding: 0 $small;
+  @include flex;
+  align-items: center;
+
+  // decreases padding for mobile
+  @media (max-width: $mobile-breakpoint) {
+    padding: 0 $extra-small;
+  }
+}
+
+.line {
+  position: absolute;
+  left: $half;
+  top: ($card-nav-height - 1px);
+  width: 26px;
+  height: 2px;
+  z-index: 1;
+  background: $dark-blue;
+
+  @media (max-width: $mobile-breakpoint) {
+    left: $extra-small;
+  }
+}
+
+.profiles {
+  @include flex;
+  flex-grow: 1;
+
+  .profile {
+    width: $standard;
+    height: $standard;
+  }
+}
+
+.likes {
+  @include flex;
+  align-items: center;
+
+  .heart {
+    width: $half;
+    height: $half;
+    padding-right: $extra-small;
+  }
+}
+
+.shared-info {
+  padding: $half $small;
+}
+
+// article-preview
+.preview-container {
+  margin: $extra-small $small;
+  overflow: hidden;
+  @include clearfix;
+
+  // decreases margin for mobile
+  @media (max-width: $mobile-breakpoint) {
+    margin: ($extra-small/2) $extra-small;
+  }
+}
+
+.preview-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 110px;
+  // TODO: check-transition
+  transition: top .3s cubic-bezier(.71, .01, .04, 1.6);
+}
+
+.preview-content {
+  background-color: $white;
+  border: $border;
+  box-shadow: $shadow-big;
+}
+
+.preview-info {
+  height: $card-nav-height;
+  @include flex;
+
+  .btn {
+    width: $card-nav-height;
+    height: $card-nav-height;
+  }
+}
+
+.provider {
+  @include flex;
+  align-items: center;
+  flex-grow: 1;
+
+  .revu-logo {
+    height: $half;
+    width: auto;
+    margin-left: $small;
+
+    // decreases margin for mobile
+    @media (max-width: $mobile-breakpoint) {
+      margin-left: $extra-small;
+    }
+  }
+}
+
+.price {
+  line-height: $nav-bar-height;
+  padding-right: $small;
+}
+
+.article-preview {
+  height: calc(100% - 40px);
+  display: block;
+}
+
+// gradient
+.article-preview::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: -($standard*2);
+  height: ($standard*2);
+  pointer-events: none;
+  background: linear-gradient(to top, $white 5%, rgba(255, 255, 255, 0) 100%);
+}

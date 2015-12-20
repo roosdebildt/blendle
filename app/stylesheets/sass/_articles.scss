@@ -1,0 +1,135 @@
+//
+// ARTICLE STYLES
+//
+
+// variables
+$nav-bar-height:              44px;
+$article-width:               635px;
+
+// top navigation bar
+.article-navigation {
+  line-height: $nav-bar-height;
+  height: $nav-bar-height;
+  @include flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: $white;
+
+  .btn {
+    width: $nav-bar-height;
+    height: $nav-bar-height;
+
+    &:first-child {
+      border-left: none;
+    }
+  }
+
+  @media (max-width: $desktop-breakpoint) {
+    .share, .pin, .article-info {
+      display: none;
+    }
+  }
+
+  // collapsing navbar for mobile
+  @media (max-width: $mobile-breakpoint) {
+    height: $standard;
+
+    .btn {
+      width: $standard;
+      height: $standard;
+
+      &.close{
+        border-right: $border
+      }
+
+      img {
+        max-width: 30%;
+      }
+    }
+  }
+}
+
+.article-info {
+  flex-grow: 1;
+}
+
+.provider-info {
+  position: absolute;
+  top: 2px;
+  // to center
+  left: calc(50% - 55px);
+  width: 110px;
+  z-index: 10;
+
+  @media (max-width: $mobile-breakpoint) {
+    // to center
+    left: calc(50% - 30px);
+    width: 60px;
+
+    img {
+      width: 60px;
+    }
+  }
+}
+
+// main content
+.content {
+  padding-top: $nav-bar-height;
+  padding-bottom: ($nav-bar-height*2);
+
+  @media (max-width: $mobile-breakpoint) {
+    padding-top: $standard;
+    padding-bottom: ($standard*2);
+  }
+}
+
+// articles
+.article {
+  background-color: $white;
+  height: 100%;
+}
+
+.article-main-image img {
+  width: 100%;
+  height: auto;
+}
+
+.article-container {
+  @include flex;
+  justify-content: center;
+}
+
+.article-content {
+  max-width: $article-width;
+}
+
+.article-title {
+  max-width: (($article-width/6)*5);
+  word-wrap: break-word;
+}
+
+.article-subtitle {
+  max-width: 100%;
+  max-width: ($article-width/2);
+  word-wrap: break-word;
+}
+
+.article-image {
+  padding: $half 0;
+  text-align: right;
+  @include flex;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.stacked {
+  padding-top: 0;
+}
