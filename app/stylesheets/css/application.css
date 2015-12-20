@@ -96,14 +96,9 @@ a {
   text-decoration: none; }
 
 .genre {
-  font-size: 11px;
-  line-height: 17px;
   color: #343C59;
-  border: 1px solid #343C59;
-  border-radius: 4px;
-  padding: 0 5px;
-  height: 17px;
-  margin-right: 5px; }
+  font-size: 11px;
+  line-height: 17px; }
   @media (max-width: 450px) {
     .genre {
       font-size: 7.2px; } }
@@ -283,6 +278,7 @@ figcaption {
       margin: 2.5px 10px; } }
 
 .shared-content {
+  background-color: #FFFFFF;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.07);
   border-radius: 4px;
   min-height: 150px; }
@@ -297,6 +293,13 @@ figcaption {
   @media (max-width: 450px) {
     .shared-by {
       padding: 0 5px; } }
+
+.genre {
+  border: 1px solid #343C59;
+  border-radius: 4px;
+  padding: 0 5px;
+  height: 17px;
+  margin-right: 5px; }
 
 .line {
   position: absolute;
@@ -454,7 +457,7 @@ figcaption {
   background-color: #FFFFFF;
   height: 100%; }
 
-.article-main-image img {
+.main-image-small img {
   width: 100%;
   height: auto; }
 

@@ -63,14 +63,9 @@ a {
 // CARDS
 //
 .genre {
+  color: $dark-blue;
   font-size: $genre-font-size;
   line-height: 17px;
-  color: $dark-blue;
-  border: 1px solid $dark-blue;
-  border-radius: $border-radius;
-  padding: 0 5px;
-  height: 17px;
-  margin-right: 5px;
 
   @media (max-width: $mobile-breakpoint) {
     font-size: $card-font-size*$mobile;

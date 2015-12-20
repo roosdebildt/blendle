@@ -41,7 +41,7 @@ $border-radius:                4px;
 }
 
 .shared-content {
-  // background-color: $white;
+  background-color: $white;
   box-shadow: $shadow-small;
   border-radius: $border-radius;
   min-height: 150px;
@@ -58,6 +58,14 @@ $border-radius:                4px;
   @media (max-width: $mobile-breakpoint) {
     padding: 0 $extra-small;
   }
+}
+
+.genre {
+  border: 1px solid $dark-blue;
+  border-radius: $border-radius;
+  padding: 0 5px;
+  height: 17px;
+  margin-right: 5px;
 }
 
 .line {
