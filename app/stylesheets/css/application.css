@@ -45,6 +45,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: "AlegreyaSans-Medium";
+  src: url("../fonts/alegreyasans-medium.ttf"); }
+
+@font-face {
+  font-family: "AlegreyaSans-Bold";
+  src: url("../fonts/alegreyasans-bold.ttf"); }
+
+@font-face {
+  font-family: "AlegreyaSans-ExtraBold";
+  src: url("../fonts/alegreyasans-extrabold.ttf"); }
+
 html, body {
   height: 100%; }
 
@@ -68,7 +80,7 @@ html, body {
   border-left: 1px solid #DBDBDB; }
 
 body {
-  font-family: "Proxima Nova";
+  font-family: "Proxima Nova", "proxima-nova", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 30px;
   color: #8B8B8B; }
@@ -117,7 +129,8 @@ a {
   padding-left: 15px; }
 
 .article-title {
-  font-family: "SourceSansPro-Black", sans-serif;
+  font-family: "SourceSansPro-Black", "source-sans-pro", Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-size: 56px;
   line-height: 60px;
   color: #000000;
@@ -133,7 +146,8 @@ a {
       padding: 15px 7.5px 0 7.5px; } }
 
 .article-subtitle {
-  font-family: "SourceSansPro-Bold";
+  font-family: "SourceSansPro-Bold", "source-sans-pro", Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-size: 28px;
   color: #CE242D;
   text-transform: uppercase;
@@ -148,7 +162,7 @@ a {
       padding: 15px 7.5px 0 7.5px; } }
 
 .article-intro {
-  font-family: "AlegreyaSans-Medium";
+  font-family: "AlegreyaSans-Medium", Helvetica, Arial, sans-serif;
   font-size: 26px;
   color: #000000;
   padding: 30px 15px 0 15px; }
@@ -162,7 +176,8 @@ a {
       padding: 15px 7.5px 0 7.5px; } }
 
 .article-author {
-  font-family: "AlegreyaSans-ExtraBold";
+  font-family: "AlegreyaSans-ExtraBold", Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-size: 18px;
   color: #333332;
   padding: 30px 15px; }
@@ -172,7 +187,8 @@ a {
       padding: 15px 7.5px; } }
 
 .article-header {
-  font-family: "AlegreyaSans-Bold";
+  font-family: "AlegreyaSans-Bold", Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-size: 22px;
   color: #CE242D;
   text-transform: uppercase;
@@ -184,7 +200,7 @@ a {
       padding: 15px 7.5px 0 7.5px; } }
 
 .article-paragraph {
-  font-family: "AGaramondPro-Regular";
+  font-family: "AGaramondPro-Regular", "Garamond", serif;
   font-size: 21px;
   color: #333332;
   padding: 0 15px; }
@@ -399,14 +415,14 @@ figcaption {
   @media (max-width: 800px) {
     .article-navigation .share, .article-navigation .pin, .article-navigation .article-info {
       display: none; } }
-  .article-navigation .close {
-    border-right: 1px solid #DBDBDB; }
   @media (max-width: 450px) {
     .article-navigation {
       height: 30px; }
       .article-navigation .btn {
         width: 30px;
         height: 30px; }
+        .article-navigation .btn.close {
+          border-right: 1px solid #DBDBDB; }
         .article-navigation .btn img {
           max-width: 30%; } }
 
