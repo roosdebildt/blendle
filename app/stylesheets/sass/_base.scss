@@ -2,6 +2,14 @@ $nav-bar-height:        44px;
 $article-width:         635px;
 $card-width:            335px;
 
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 html, body {
   height: 100%;
 }
@@ -34,6 +42,13 @@ img {
 
 .container {
   height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: hidden;
+  @include clearfix;
 }
 
 // card styles
@@ -42,15 +57,28 @@ img {
 }
 
 .card {
-  width: $card-width;
+  height: calc(100% - 86px);
+  max-height: 760px;
+  margin: 43px auto;
   position: relative;
-  height: 100%;
-  max-height: 100%;
+  overflow-y: hidden;
   max-width: 100%;
+  clear: both;
+  @include clearfix;
+
+  @media (min-width: 500px) {
+    max-width: $card-width;
+  }
+}
+
+.gradient {
+  background-image: -webkit-linear-gradient(rgba(255,255,255,0.38) 0%, #FFFFFF 100%);
+  background-image: -o-linear-gradient(rgba(255,255,255,0.38) 0%, #FFFFFF 100%);
+  background-image: linear-gradient(rgba(255,255,255,0.38) 0%, #FFFFFF 100%);
 }
 
 .shared-container {
-  padding: 10px;
+  margin: 15px;
 }
 
 .shared-content {
@@ -70,18 +98,30 @@ img {
 }
 
 .preview-container {
-  padding: 5px;
-  position: relative;
-  top: -20px;
-  height: 100%;
-  // overflow: hidden;
+  margin: 10px;
+  overflow: hidden;
+  @include clearfix;
+  clear: both;
+}
+
+.preview-container {
+  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 132px;
+  transition: top .3s cubic-bezier(.71, .01, .04, 1.6);
 }
 
 .preview-content {
   background-color: $white;
   border: 1px solid $light-grey;
   box-shadow: $shadow-big;
-  // overflow: hidden;
+  height: 100%;
+  overflow: hidden;
+  clear: both;
+  @include clearfix;
 }
 
 .preview-info {
@@ -145,6 +185,7 @@ img {
 
 .article {
   background-color: $white;
+  height: 100%;
 }
 
 .article-main-image {
@@ -178,4 +219,53 @@ img {
 
 .stacked {
   padding-top: 0;
+}
+
+// experiment
+// experiment
+
+.app {
+  display: block;
+  height: 100%;
+  background-color: blue;
+}
+
+.main {
+  overflow-y: hidden;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  background-color: red;
+}
+
+.v-module {
+  display: block;
+  width: auto;
+  background-color: yellow;
+  height: 100%;
+}
+
+.pane-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: hidden;
+  background-color: green;
+}
+
+.pane-content {
+  height: calc(100% - 86px);
+  max-height: 760px;
+  margin: 43px 10px;
+  width: 300px;
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+}
+
+.blue {
+  background-color: blue;
+  border: 1px solid white;
 }
