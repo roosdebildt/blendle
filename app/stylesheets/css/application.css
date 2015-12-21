@@ -46,7 +46,7 @@ table {
   border-spacing: 0; }
 
 @font-face {
-  font-family: 'AlegreyaSans-blapbliep';
+  font-family: 'AlegreyaSans-Medium';
   src: url("/blendle/app/stylesheets/fonts/alegreyasans-medium-webfont.eot");
   src: url("/blendle/app/stylesheets/fonts/alegreyasans-medium-webfont.eot?#iefix") format("embedded-opentype"), url("/blendle/app/stylesheets/fonts/alegreyasans-medium-webfont.woff2") format("woff2"), url("/blendle/app/stylesheets/fonts/alegreyasans-medium-webfont.woff") format("woff"), url("/blendle/app/stylesheets/fonts/alegreyasans-medium-webfont.ttf") format("truetype"), url("/blendle/app/stylesheets/fonts/alegreyasans-medium-webfont.svg#alegreya_sansmedium") format("svg"); }
 
