@@ -37,6 +37,3 @@ Icon?
 ehthumbs.db
 Thumbs.db
 .elasticbeanstalk/
-
-# Node modules #
-/node_modules
