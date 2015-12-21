@@ -4,16 +4,21 @@
 
 // Alegreya Sans
 @font-face {
-  font-family: "AlegreyaSans-Medium";
-  src: url("../fonts/alegreyasans-medium.ttf");
+    font-family: 'AlegreyaSans-Bold';
+    src: url('/stylesheets/fonts/alegreyasanssc-extrabold-webfont.eot');
+    src: url('/stylesheets/fonts/alegreyasanssc-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/stylesheets/fonts/alegreyasanssc-extrabold-webfont.woff2') format('woff2'),
+         url('/stylesheets/fonts/alegreyasanssc-extrabold-webfont.woff') format('woff'),
+         url('/stylesheets/fonts/alegreyasanssc-extrabold-webfont.ttf') format('truetype'),
+         url('/stylesheets/fonts/alegreyasanssc-extrabold-webfont.svg#alegreya_sans_scextrabold') format('svg');
 }
 
 @font-face {
-  font-family: "AlegreyaSans-Bold";
-  src: url("../fonts/alegreyasans-bold.ttf");
-}
-
-@font-face {
-  font-family: "AlegreyaSans-ExtraBold";
-  src: url("../fonts/alegreyasans-extrabold.ttf");
+    font-family: 'AlegreyaSans-Medium';
+    src: url('/stylesheets/fonts/alegreyasanssc-medium-webfont.eot');
+    src: url('/stylesheets/fonts/alegreyasanssc-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/stylesheets/fonts/alegreyasanssc-medium-webfont.woff2') format('woff2'),
+         url('/stylesheets/fonts/alegreyasanssc-medium-webfont.woff') format('woff'),
+         url('/stylesheets/fonts/alegreyasanssc-medium-webfont.ttf') format('truetype'),
+         url('/stylesheets/fonts/alegreyasanssc-medium-webfont.svg#alegreya_sans_scmedium') format('svg');
 }
