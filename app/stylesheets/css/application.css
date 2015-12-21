@@ -46,14 +46,19 @@ table {
   border-spacing: 0; }
 
 @font-face {
-  font-family: 'AlegreyaSans-Bold';
-  src: url("/stylesheets/fonts/alegreyasanssc-extrabold-webfont.eot");
-  src: url("/stylesheets/fonts/alegreyasanssc-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("/stylesheets/fonts/alegreyasanssc-extrabold-webfont.woff2") format("woff2"), url("/stylesheets/fonts/alegreyasanssc-extrabold-webfont.woff") format("woff"), url("/stylesheets/fonts/alegreyasanssc-extrabold-webfont.ttf") format("truetype"), url("/stylesheets/fonts/alegreyasanssc-extrabold-webfont.svg#alegreya_sans_scextrabold") format("svg"); }
+  font-family: 'AlegreyaSans-Medium';
+  src: url("alegreyasans-medium-webfont.eot");
+  src: url("alegreyasans-medium-webfont.eot?#iefix") format("embedded-opentype"), url("alegreyasans-medium-webfont.woff2") format("woff2"), url("alegreyasans-medium-webfont.woff") format("woff"), url("alegreyasans-medium-webfont.ttf") format("truetype"), url("alegreyasans-medium-webfont.svg#alegreya_sansmedium") format("svg"); }
 
 @font-face {
-  font-family: 'AlegreyaSans-Medium';
-  src: url("/stylesheets/fonts/alegreyasanssc-medium-webfont.eot");
-  src: url("/stylesheets/fonts/alegreyasanssc-medium-webfont.eot?#iefix") format("embedded-opentype"), url("/stylesheets/fonts/alegreyasanssc-medium-webfont.woff2") format("woff2"), url("/stylesheets/fonts/alegreyasanssc-medium-webfont.woff") format("woff"), url("/stylesheets/fonts/alegreyasanssc-medium-webfont.ttf") format("truetype"), url("/stylesheets/fonts/alegreyasanssc-medium-webfont.svg#alegreya_sans_scmedium") format("svg"); }
+  font-family: 'AlegreyaSans-Bold';
+  src: url("alegreyasans-bold-webfont.eot");
+  src: url("alegreyasans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("alegreyasans-bold-webfont.woff2") format("woff2"), url("alegreyasans-bold-webfont.woff") format("woff"), url("alegreyasans-bold-webfont.ttf") format("truetype"), url("alegreyasans-bold-webfont.svg#alegreya_sansbold") format("svg"); }
+
+@font-face {
+  font-family: 'AlegreyaSans-ExtraBold';
+  src: url("alegreyasans-extrabold-webfont.eot");
+  src: url("alegreyasans-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("alegreyasans-extrabold-webfont.woff2") format("woff2"), url("alegreyasans-extrabold-webfont.woff") format("woff"), url("alegreyasans-extrabold-webfont.ttf") format("truetype"), url("alegreyasans-extrabold-webfont.svg#alegreya_sansextrabold") format("svg"); }
 
 html, body {
   height: 100%; }
